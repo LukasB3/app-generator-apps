@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="f2rhh3vmaifkyqox6val"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guest Wi-Fi QR Code</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Guest Wi-Fi QR Code</h1>
+  <p class="sub">Guests scan it with their phone camera and join instantly.</p>
+  <div class="card">
+    <form id="form" autocomplete="off">
+      <label>Network name (SSID)
+        <input id="ssid" type="text" placeholder="MyHomeWiFi" maxlength="32" required="">
+      </label>
+      <label>Security
+        <select id="sec">
+          <option value="WPA">WPA / WPA2 / WPA3</option>
+          <option value="WEP">WEP</option>
+          <option value="nopass">None (open network)</option>
+        </select>
+      </label>
+      <label id="keyLabel">Wi-Fi key
+        <input id="key" type="text" placeholder="Network key" maxlength="63" autocapitalize="off" spellcheck="false">
+      </label>
+      <label class="check"><input id="hidden" type="checkbox"> Hidden network</label>
+      <label>Card title
+        <input id="title" type="text" value="Welcome! Join our Wi-Fi" maxlength="60">
+      </label>
+    </form>
+    <div id="out" class="out">
+      <div id="card" class="printcard">
+        <h2 id="cardTitle"></h2>
+        <div id="qr" aria-label="Wi-Fi QR code"></div>
+        <p id="empty" class="empty">Enter a network name to create the code.</p>
+        <p class="details" id="details"></p>
+      </div>
+      <div class="actions">
+        <button id="print" type="button">Print card</button>
+        <button id="png" type="button">Download PNG</button>
+      </div>
+    </div>
+  </div>
+  <p class="note">Everything happens offline in your browser. Nothing is sent or stored anywhere.</p>
+</main>
+<script src="lib/qrcode.js"></script>
+<script src="app.js"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
