@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="7piwe5xxbucvh3xsqs3t"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guest Wi-Fi QR Code</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section class="card controls">
+    <h1>Guest Wi-Fi QR</h1>
+    <p class="sub">Fill in your network details, then print the card. Guests scan it with their phone camera to join.</p>
+    <form id="form" autocomplete="off">
+      <label>Network name (SSID)
+        <input id="ssid" type="text" maxlength="32" placeholder="MyHomeWiFi" required="">
+      </label>
+      <label>Security
+        <select id="sec">
+          <option value="WPA">WPA / WPA2 / WPA3</option>
+          <option value="WEP">WEP</option>
+          <option value="nopass">None (open network)</option>
+        </select>
+      </label>
+      <label id="passRow">Wi-Fi key
+        <input id="pass" type="text" maxlength="63" placeholder="Network key" spellcheck="false">
+      </label>
+      <label class="check"><input id="hidden" type="checkbox"> Hidden network</label>
+    </form>
+    <p class="note">Everything is generated on your device. Nothing is sent or stored anywhere.</p>
+  </section>
+
+  <section class="card preview">
+    <div id="sheet" class="sheet">
+      <h2>Join our Wi-Fi</h2>
+      <div id="qr" class="qr"><p class="empty">Enter a network name to create your code.</p></div>
+      <p class="how">Open your camera and point it at the code.</p>
+      <dl id="details" hidden="">
+        <dt>Network</dt><dd id="dSsid"></dd>
+        <dt>Key</dt><dd id="dPass"></dd>
+      </dl>
+    </div>
+    <div class="actions">
+      <button id="print" type="button">Print card</button>
+    </div>
+  </section>
+</main>
+<script src="lib/qrcode.js"></script>
+<script src="app.js"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
