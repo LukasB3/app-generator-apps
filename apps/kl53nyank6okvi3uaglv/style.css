@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px;
+  font-family: system-ui, sans-serif; background: linear-gradient(135deg, #1e3a8a, #0f766e); color: #1f2937;
+}
+.card { background: #fff; width: 100%; max-width: 420px; border-radius: 18px; padding: 24px; box-shadow: 0 20px 50px rgba(0,0,0,.3); }
+h1 { margin: 0 0 12px; font-size: 1.5rem; }
+label { display: block; margin: 16px 0 6px; font-weight: 600; font-size: .95rem; }
+input[type=number] { width: 100%; padding: 12px; font-size: 1.2rem; border: 2px solid #d1d5db; border-radius: 10px; }
+input:focus, button:focus-visible { outline: 3px solid #5eead4; }
+input[type=range] { width: 100%; accent-color: #0f766e; }
+.presets { display: flex; gap: 6px; margin-top: 6px; }
+.presets button, .stepper button { border: 0; background: #e5e7eb; border-radius: 8px; padding: 10px; font-size: 1rem; cursor: pointer; }
+.presets button { flex: 1; }
+.presets button.on { background: #0f766e; color: #fff; }
+.stepper { display: flex; gap: 8px; }
+.stepper button { width: 52px; font-size: 1.5rem; }
+.stepper input { text-align: center; }
+.check { display: flex; gap: 8px; align-items: center; font-weight: 400; }
+.msg { color: #b91c1c; min-height: 1.2em; margin: 12px 0 0; font-size: .9rem; }
+.results { background: #f0fdfa; border-radius: 12px; padding: 16px; margin-top: 8px; }
+.big { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.big strong { font-size: 2rem; color: #0f766e; }
+dl { margin: 12px 0 0; }
+dl div { display: flex; justify-content: space-between; padding: 4px 0; border-top: 1px solid #ccfbf1; }
+dt { color: #4b5563; } dd { margin: 0; font-weight: 600; }

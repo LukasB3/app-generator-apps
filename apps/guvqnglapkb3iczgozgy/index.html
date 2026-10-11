@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="guvqnglapkb3iczgozgy"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Tetris</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>TETRIS</h1>
+  <div class="game">
+    <canvas id="board" width="300" height="600"></canvas>
+    <aside>
+      <div class="box"><span>Score</span><b id="score">0</b></div>
+      <div class="box"><span>Lines</span><b id="lines">0</b></div>
+      <div class="box"><span>Level</span><b id="level">1</b></div>
+      <div class="box"><span>Next</span><canvas id="next" width="96" height="96"></canvas></div>
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+    </aside>
+  </div>
+  <div class="touch">
+    <button data-a="left">◀</button>
+    <button data-a="rotate">⟳</button>
+    <button data-a="right">▶</button>
+    <button data-a="down">▼</button>
+    <button data-a="drop">⤓</button>
+  </div>
+  <p class="help">← → move · ↑ rotate · ↓ soft drop · Space hard drop · P pause</p>
+</main>
+<script src="app.js"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>

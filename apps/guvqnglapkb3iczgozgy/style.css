@@ -1,0 +1,17 @@
+*{box-sizing:border-box}
+body{margin:0;background:#0f1222;color:#e8eaf6;font-family:system-ui,sans-serif;min-height:100vh;display:flex;justify-content:center;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+main{display:flex;flex-direction:column;align-items:center;padding:8px}
+h1{margin:4px 0 8px;letter-spacing:6px;font-size:1.6rem;color:#7cf}
+.game{display:flex;gap:12px;align-items:flex-start}
+#board{height:min(66vh,600px);width:auto;aspect-ratio:1/2;background:#05060f;border:3px solid #3a4080;border-radius:6px}
+aside{display:flex;flex-direction:column;gap:8px;width:110px}
+.box{background:#1a1f3d;border-radius:6px;padding:6px 8px;display:flex;flex-direction:column;gap:2px}
+.box span{font-size:.7rem;text-transform:uppercase;color:#99a}
+.box b{font-size:1.2rem}
+#next{width:80px;height:80px;align-self:center}
+button{background:#3a4cc0;color:#fff;border:0;border-radius:6px;padding:10px;font-size:1rem;cursor:pointer}
+button:active{background:#5566e0}
+.touch{display:flex;gap:8px;margin-top:10px}
+.touch button{width:52px;height:46px;font-size:1.2rem}
+.help{font-size:.75rem;color:#99a;margin:8px 0}
+@media (max-width:420px){aside{width:90px}#next{width:60px;height:60px}}

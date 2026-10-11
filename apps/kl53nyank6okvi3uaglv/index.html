@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="kl53nyank6okvi3uaglv"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tip Splitter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+  <h1>Tip Splitter</h1>
+  <form id="form" novalidate="">
+    <label for="bill">Bill amount</label>
+    <input id="bill" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0.00">
+
+    <label for="tip">Tip: <output id="tipLabel">18</output>%</label>
+    <input id="tip" type="range" min="0" max="40" step="1" value="18">
+    <div class="presets" id="presets">
+      <button type="button" data-tip="10">10%</button>
+      <button type="button" data-tip="15">15%</button>
+      <button type="button" data-tip="18">18%</button>
+      <button type="button" data-tip="20">20%</button>
+      <button type="button" data-tip="25">25%</button>
+    </div>
+
+    <label for="people">Split between</label>
+    <div class="stepper">
+      <button type="button" id="minus" aria-label="Fewer people">−</button>
+      <input id="people" type="number" inputmode="numeric" min="1" step="1" value="2">
+      <button type="button" id="plus" aria-label="More people">+</button>
+    </div>
+
+    <label class="check"><input id="round" type="checkbox"> Round each share up to a whole amount</label>
+  </form>
+
+  <p id="msg" class="msg" role="status"></p>
+  <section class="results">
+    <div class="big"><span>Each person pays</span><strong id="perPerson">0.00</strong></div>
+    <dl>
+      <div><dt>Tip total</dt><dd id="tipTotal">0.00</dd></div>
+      <div><dt>Tip per person</dt><dd id="tipEach">0.00</dd></div>
+      <div><dt>Grand total</dt><dd id="total">0.00</dd></div>
+    </dl>
+  </section>
+</main>
+<script src="app.js"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>

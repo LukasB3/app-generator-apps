@@ -1,0 +1,37 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, #1b2538, #0b0f19);
+  color: #e8f1ff;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+main { padding: 1rem; }
+#clock {
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(2.5rem, 15vw, 10rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 30px rgba(90, 160, 255, 0.5);
+  white-space: nowrap;
+}
+#date {
+  margin-top: 0.5rem;
+  font-size: clamp(1rem, 3.5vw, 1.8rem);
+  color: #9fb4d6;
+}
+button {
+  margin-top: 2rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  color: inherit;
+  background: transparent;
+  border: 1px solid #4a6290;
+  border-radius: 999px;
+  cursor: pointer;
+}
+button:hover, button:focus-visible { background: #22304d; }
