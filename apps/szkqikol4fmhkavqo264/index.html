@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="szkqikol4fmhkavqo264"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drum Machine</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Drum Machine</h1>
+  <div class="controls">
+    <button id="play" type="button">▶ Play</button>
+    <label class="tempo">Tempo <input id="tempo" type="range" min="60" max="200" value="110"> <output id="bpm">110</output> BPM</label>
+    <button id="clear" type="button" class="secondary">Clear</button>
+  </div>
+  <div id="grid" aria-label="Step sequencer"></div>
+  <p class="note">Tap cells to toggle steps. Sounds are synthesized offline with Web Audio.</p>
+</main>
+<script src="app.js"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
