@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; justify-content: center; padding: 20px;
+  font-family: system-ui, sans-serif; background: linear-gradient(135deg, #5b8def, #8e5bef); color: #222; }
+.card { background: #fff; width: 100%; max-width: 440px; border-radius: 16px; padding: 24px; align-self: flex-start;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+h1 { margin: 0 0 4px; font-size: 1.5rem; }
+.sub { margin: 0 0 16px; color: #666; font-size: .95rem; }
+label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 12px; }
+input[type=text], select { display: block; width: 100%; margin-top: 4px; padding: 10px; font-size: 1rem;
+  border: 1px solid #ccc; border-radius: 8px; font-weight: 400; }
+.check { display: flex; align-items: center; gap: 8px; font-weight: 400; }
+.out { text-align: center; margin: 12px 0; }
+#qr svg { width: 100%; max-width: 280px; height: auto; }
+.msg { color: #555; margin: 8px 0 0; font-size: .95rem; }
+.actions { display: flex; gap: 8px; }
+button { flex: 1; padding: 10px; font-size: .95rem; border: 0; border-radius: 8px; background: #5b5bef; color: #fff; cursor: pointer; }
+button:disabled { opacity: .4; cursor: not-allowed; }
+.note { font-size: .8rem; color: #777; margin: 14px 0 0; }
+@media print {
+  body { background: #fff; padding: 0; }
+  .card { box-shadow: none; max-width: none; }
+  form, .actions, .note, .sub { display: none; }
+  #qr svg { max-width: 420px; }
+  .msg { font-size: 1.4rem; color: #000; }
+}

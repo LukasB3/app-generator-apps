@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="n6exqjmlrch6tr7z67l3"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guest Wi-Fi QR Code</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+  <h1>Guest Wi-Fi QR</h1>
+  <p class="sub">Guests scan the code with their phone camera to join, with no typing.</p>
+  <form id="form" autocomplete="off">
+    <label>Network name (SSID)
+      <input id="ssid" type="text" maxlength="32" placeholder="MyHomeWiFi" autocapitalize="off" spellcheck="false">
+    </label>
+    <label>Security
+      <select id="sec">
+        <option value="WPA">WPA / WPA2 / WPA3</option>
+        <option value="WEP">WEP</option>
+        <option value="nopass">None (open network)</option>
+      </select>
+    </label>
+    <label id="pwRow">Wi-Fi key
+      <input id="pw" type="text" maxlength="63" placeholder="Network key" autocapitalize="off" spellcheck="false">
+    </label>
+    <label class="check"><input id="hidden" type="checkbox"> Hidden network</label>
+  </form>
+  <div id="out" class="out">
+    <div id="qr" aria-live="polite"></div>
+    <p id="msg" class="msg">Enter your network name to create a code.</p>
+  </div>
+  <div class="actions">
+    <button id="print" type="button">Print sign</button>
+    <button id="dl" type="button">Download PNG-free SVG</button>
+  </div>
+  <p class="note">Everything is made on this page, offline. Nothing is sent or stored anywhere.</p>
+</main>
+<script src="lib/qrcode.js"></script>
+<script src="app.js"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
