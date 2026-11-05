@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="caz4pxo2tnycsrxq4blt"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5-Minute Timer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>5-Minute Timer</h1>
+  <div class="dial">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <circle class="track" cx="50" cy="50" r="45"></circle>
+      <circle id="ring" class="ring" cx="50" cy="50" r="45"></circle>
+    </svg>
+    <div id="display" class="display" role="timer" aria-live="off">05:00</div>
+  </div>
+  <p id="status" class="status" aria-live="polite">Ready</p>
+  <div class="buttons">
+    <button id="start" class="primary" type="button">Start</button>
+    <button id="pause" type="button" disabled="">Pause</button>
+    <button id="reset" type="button">Reset</button>
+  </div>
+</main>
+<script src="app.js"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
