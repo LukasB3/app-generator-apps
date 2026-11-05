@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #05060f; color: #7CFC9A; font-family: "Courier New", monospace; min-height: 100vh; display: flex; justify-content: center; }
+main { width: 100%; max-width: 480px; padding: 8px; text-align: center; }
+h1 { margin: 6px 0; letter-spacing: 4px; font-size: 1.4rem; }
+.hud { display: flex; justify-content: space-between; padding: 4px 2px; }
+.wrap { position: relative; }
+canvas { width: 100%; height: auto; background: #000; border: 2px solid #7CFC9A; display: block; touch-action: none; }
+#overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,.7); gap: 14px; }
+#overlay.hidden { display: none; }
+#msg { font-size: 1.3rem; margin: 0; white-space: pre-line; }
+button { font: inherit; background: #0b2a14; color: #7CFC9A; border: 2px solid #7CFC9A; padding: 12px 22px; border-radius: 6px; cursor: pointer; }
+button:active { background: #7CFC9A; color: #000; }
+.touch { display: flex; gap: 8px; margin-top: 8px; }
+.touch button { flex: 1; padding: 16px 0; user-select: none; touch-action: none; }
+.touch #fire { flex: 2; }
+.help { font-size: .8rem; opacity: .7; }
