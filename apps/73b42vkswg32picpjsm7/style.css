@@ -1,0 +1,9 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #0b0b17; color: #eee; font-family: system-ui, sans-serif; display: flex; justify-content: center; }
+main { width: 100%; max-width: 480px; padding: 8px; text-align: center; }
+h1 { margin: 4px 0; letter-spacing: 6px; color: #ff4d3d; text-shadow: 0 0 12px #ff4d3d; font-size: 1.6rem; }
+.hud { display: flex; justify-content: space-between; font-weight: 700; padding: 4px 2px; }
+canvas { width: 100%; max-height: 72vh; aspect-ratio: 3/4; background: #05050d; border: 2px solid #ff4d3d; border-radius: 8px; touch-action: none; display: block; margin: 0 auto; }
+button { margin: 10px; padding: 10px 28px; font-size: 1.1rem; font-weight: 700; background: #ff4d3d; color: #fff; border: 0; border-radius: 8px; cursor: pointer; }
+button:hover { background: #ff6a5c; }
+.help, .note { font-size: .8rem; opacity: .7; margin: 4px 0; }
