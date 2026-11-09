@@ -62,6 +62,15 @@
     a.remove();
   }
 
+  let dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme() {
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    $('theme').textContent = dark ? 'Light mode' : 'Dark mode';
+    $('theme').setAttribute('aria-pressed', dark ? 'true' : 'false');
+  }
+  $('theme').addEventListener('click', () => { dark = !dark; applyTheme(); });
+  applyTheme();
+
   $('form').addEventListener('input', update);
   $('form').addEventListener('submit', (e) => e.preventDefault());
   $('print').addEventListener('click', () => window.print());
