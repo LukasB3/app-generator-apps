@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="vnro27q725hp4hkqiugd"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Tic Tac Toe</h1>
+  <div class="modes">
+    <button id="mode-ai" class="active">vs Computer</button>
+    <button id="mode-two">Two players</button>
+  </div>
+  <div class="score">
+    <div>X <strong id="sx">0</strong></div>
+    <div>Draws <strong id="sd">0</strong></div>
+    <div>O <strong id="so">0</strong></div>
+  </div>
+  <p id="status" aria-live="polite"></p>
+  <div id="board" role="grid" aria-label="Game board"></div>
+  <div class="actions">
+    <button id="new">New game</button>
+    <button id="reset">Reset scores</button>
+  </div>
+</main>
+<script src="app.js"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
