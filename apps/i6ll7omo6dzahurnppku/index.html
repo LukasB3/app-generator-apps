@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="i6ll7omo6dzahurnppku"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guest Wi-Fi QR Code</title>
+<link rel="stylesheet" href="style.css?v=i6ll7omo6dzahurnppku">
+</head>
+<body>
+<main>
+  <section class="card controls">
+    <h1>Guest Wi-Fi</h1>
+    <p class="sub">Make a QR code your guests can scan to join your network.</p>
+    <form id="form" autocomplete="off">
+      <label>Network name (SSID)
+        <input id="ssid" type="text" maxlength="32" placeholder="MyHomeWiFi" required="">
+      </label>
+      <label>Security
+        <select id="sec">
+          <option value="WPA">WPA / WPA2 / WPA3</option>
+          <option value="WEP">WEP</option>
+          <option value="nopass">None (open network)</option>
+        </select>
+      </label>
+      <label id="passRow">Wi-Fi key
+        <input id="pass" type="text" maxlength="63" placeholder="Network key" autocapitalize="off" autocorrect="off" spellcheck="false">
+      </label>
+      <label class="check"><input id="hidden" type="checkbox"> Hidden network</label>
+      <label>Card title
+        <input id="title" type="text" maxlength="40" value="Welcome! Scan to join our Wi-Fi">
+      </label>
+      <label class="check"><input id="showpw" type="checkbox" checked=""> Show key on printed card</label>
+    </form>
+    <p class="note">Everything happens in your browser. Nothing is sent or stored anywhere.</p>
+  </section>
+
+  <section class="card preview">
+    <div id="sheet" class="sheet">
+      <h2 id="outTitle"></h2>
+      <div id="qr" class="qr"></div>
+      <p id="empty" class="empty">Enter a network name to see your code.</p>
+      <dl id="details">
+        <dt>Network</dt><dd id="outSsid"></dd>
+        <dt id="outPassLabel">Key</dt><dd id="outPass"></dd>
+      </dl>
+    </div>
+    <div class="actions">
+      <button id="print" type="button">Print</button>
+      <button id="download" type="button">Download PNG</button>
+    </div>
+  </section>
+</main>
+<script src="lib/qrcode.js?v=i6ll7omo6dzahurnppku"></script>
+<script src="app.js?v=i6ll7omo6dzahurnppku"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
