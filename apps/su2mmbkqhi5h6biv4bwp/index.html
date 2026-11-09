@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src https://sjzzdkyxadmifktilrre.supabase.co/rest/v1/; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="su2mmbkqhi5h6biv4bwp"><meta name="referrer" content="no-referrer"><meta name="app-generator-db" content="{&quot;url&quot;:&quot;https://sjzzdkyxadmifktilrre.supabase.co&quot;,&quot;key&quot;:&quot;sb_publishable_TDZ-EYWPPCvAnOL7ByMM6A_06bv5OvG&quot;,&quot;prefix&quot;:&quot;asu2mmbkqhi5h6biv4bwp_&quot;}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guestbook</title>
+<link rel="stylesheet" href="style.css?v=su2mmbkqhi5h6biv4bwp">
+</head>
+<body>
+<main>
+  <h1>Guestbook</h1>
+  <p class="sub">Leave your name and a short message.</p>
+  <form id="form" autocomplete="off">
+    <label>Name <input id="author" maxlength="40" required=""></label>
+    <label>Message <textarea id="message" maxlength="280" rows="3" required=""></textarea></label>
+    <div class="row"><span id="count">0/280</span><button type="submit" id="send">Sign the guestbook</button></div>
+    <p id="error" role="alert"></p>
+  </form>
+  <p class="note">Entries are public and visible to everyone. Please don't share private details.</p>
+  <ul id="list"></ul>
+  <p id="empty" hidden="">No entries yet. Be the first!</p>
+</main>
+<script src="lib/db.js?v=su2mmbkqhi5h6biv4bwp"></script>
+<script src="app.js?v=su2mmbkqhi5h6biv4bwp"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator. Anything entered here is public.</a></body></html>
