@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src https://api.app-generator.lukasbossert.com/api/data/; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="4t2ypvwyfilqtbk4o356"><meta name="referrer" content="no-referrer"><meta name="app-generator-data" content="https://api.app-generator.lukasbossert.com/api/data/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>City Weather Forecast</title>
+<link rel="stylesheet" href="style.css?v=4t2ypvwyfilqtbk4o356">
+</head>
+<body>
+<main>
+  <h1>Weather forecast</h1>
+  <form id="search" autocomplete="off">
+    <input id="q" type="text" maxlength="60" placeholder="Search for a city…" aria-label="City name">
+    <button type="submit">Search</button>
+  </form>
+  <ul id="matches" class="matches"></ul>
+  <p id="msg" class="msg" role="status"></p>
+  <section id="current" hidden=""></section>
+  <section id="hourlyWrap" hidden="">
+    <h2>Next 24 hours</h2>
+    <div id="hourly" class="hourly"></div>
+  </section>
+  <section id="dailyWrap" hidden="">
+    <h2>7-day forecast</h2>
+    <div id="daily"></div>
+  </section>
+  <p id="credit" class="credit"></p>
+</main>
+<script src="lib/data.js?v=4t2ypvwyfilqtbk4o356"></script>
+<script src="app.js?v=4t2ypvwyfilqtbk4o356"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator. Live data: Open-Meteo.com, ECB via Frankfurter.</a></body></html>
