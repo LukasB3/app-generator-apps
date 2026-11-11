@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f4efe6; color: #2b2622; }
+main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { margin-bottom: 4px; }
+.sub { margin-top: 0; color: #6b625a; }
+form { background: #fff; padding: 16px; border-radius: 12px; box-shadow: 0 2px 8px #0001; display: grid; gap: 12px; }
+label { display: grid; gap: 4px; font-weight: 600; font-size: .9rem; }
+input, textarea { font: inherit; padding: 10px; border: 1px solid #cfc6ba; border-radius: 8px; resize: vertical; }
+input:focus, textarea:focus { outline: 2px solid #b5651d; border-color: transparent; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+#count { color: #6b625a; font-size: .85rem; }
+button { font: inherit; font-weight: 600; background: #b5651d; color: #fff; border: 0; padding: 10px 16px; border-radius: 8px; cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+#error { color: #b00020; margin: 0; min-height: 1em; }
+ul { list-style: none; padding: 0; display: grid; gap: 12px; }
+li { background: #fff; padding: 12px 16px; border-radius: 12px; border-left: 4px solid #b5651d; }
+li .who { font-weight: 700; }
+li .when { color: #6b625a; font-size: .8rem; margin-left: 8px; }
+li p { margin: 6px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.empty { text-align: center; color: #6b625a; }
