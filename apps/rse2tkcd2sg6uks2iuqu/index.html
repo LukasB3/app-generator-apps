@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="rse2tkcd2sg6uks2iuqu"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Address Book</title>
+<link rel="stylesheet" href="style.css?v=rse2tkcd2sg6uks2iuqu">
+</head>
+<body>
+<main>
+  <h1>📒 Address Book</h1>
+  <form id="form" autocomplete="off">
+    <h2 id="form-title">Add contact</h2>
+    <label>Name <input id="name" maxlength="80" required=""></label>
+    <label>Phone <input id="phone" type="tel" maxlength="40"></label>
+    <label>E-mail <input id="email" type="email" maxlength="120"></label>
+    <p id="error" class="error" role="alert"></p>
+    <div class="row">
+      <button type="submit" id="save">Add contact</button>
+      <button type="button" id="cancel" class="secondary" hidden="">Cancel</button>
+    </div>
+  </form>
+  <input id="search" type="search" placeholder="Search contacts…" aria-label="Search contacts">
+  <p id="count" class="muted"></p>
+  <ul id="list"></ul>
+  <p class="muted note">Contacts are stored only in this browser on this device.</p>
+</main>
+<script src="app.js?v=rse2tkcd2sg6uks2iuqu"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
