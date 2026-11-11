@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f2f4f8; color: #1d2433; }
+main { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { margin: 0 0 4px; font-size: 1.6rem; }
+.sub { margin: 0 0 20px; color: #5a6478; }
+.choices { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; }
+.choices button { padding: 12px 8px; font-size: 1rem; border: 2px solid #3b6fe0; background: #fff; color: #3b6fe0; border-radius: 10px; cursor: pointer; font-weight: 600; }
+.choices button:hover:not(:disabled) { background: #3b6fe0; color: #fff; }
+.choices button:disabled { opacity: .55; cursor: default; }
+.choices button.mine { background: #3b6fe0; color: #fff; opacity: 1; }
+.msg { min-height: 1.4em; color: #b3261e; }
+.card { background: #fff; border-radius: 14px; padding: 16px; box-shadow: 0 2px 10px rgba(0,0,0,.07); }
+.card h2 { margin: 0 0 12px; font-size: 1.15rem; }
+.card h2 span { color: #5a6478; font-weight: 400; font-size: .95rem; }
+.chartbox { position: relative; height: 340px; }
+.note { font-size: .85rem; color: #5a6478; margin-top: 16px; }
