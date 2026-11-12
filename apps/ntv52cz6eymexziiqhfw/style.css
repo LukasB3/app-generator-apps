@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: linear-gradient(160deg, #1e3a5f, #4a78a8); min-height: 100vh; color: #1b2733; }
+main { max-width: 760px; margin: 0 auto; padding: 20px 14px 40px; }
+h1 { color: #fff; margin: 8px 0 16px; }
+h2 { margin: 0; font-size: 1.2rem; }
+#search { display: flex; gap: 8px; }
+input { flex: 1; padding: 12px; border-radius: 10px; border: 0; font-size: 1rem; min-width: 0; }
+button { padding: 12px 18px; border: 0; border-radius: 10px; background: #ffb020; font-weight: 600; font-size: 1rem; cursor: pointer; }
+button:hover { background: #ffc24d; }
+.matches { list-style: none; margin: 6px 0 0; padding: 0; background: #fff; border-radius: 10px; overflow: hidden; }
+.matches button { width: 100%; text-align: left; background: none; border-radius: 0; font-weight: 400; border-bottom: 1px solid #eee; }
+.matches button:hover { background: #eef4fb; }
+.msg { color: #fff; min-height: 1.4em; }
+.card { background: #fff; border-radius: 16px; padding: 18px; margin-top: 14px; box-shadow: 0 6px 20px #0003; }
+.place { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; color: #55687a; }
+.place h2 { color: #1b2733; }
+.hero { display: flex; align-items: center; gap: 16px; margin: 12px 0; }
+.icon { font-size: 4rem; }
+.temp { font-size: 3rem; font-weight: 700; line-height: 1; }
+.label { color: #55687a; margin-top: 4px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 0; }
+.stats div { background: #f0f5fa; border-radius: 10px; padding: 10px; }
+dt { font-size: .8rem; color: #55687a; }
+dd { margin: 2px 0 0; font-weight: 600; }
+.chartbox { position: relative; height: 260px; margin-top: 10px; }
+.days { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 8px; margin-top: 12px; text-align: center; font-size: .85rem; }
+.days div { background: #f0f5fa; border-radius: 10px; padding: 8px 4px; }
+.days .e { font-size: 1.6rem; }
+.credit { color: #dce8f5; font-size: .8rem; text-align: center; }
