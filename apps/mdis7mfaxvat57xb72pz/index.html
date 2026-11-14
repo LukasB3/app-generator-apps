@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src https://api.app-generator.lukasbossert.com/api/data/; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="mdis7mfaxvat57xb72pz"><meta name="referrer" content="no-referrer"><meta name="app-generator-data" content="https://api.app-generator.lukasbossert.com/api/data/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather dashboard</title>
+<link rel="stylesheet" href="lib/fonts/space-grotesk/font.css?v=mdis7mfaxvat57xb72pz">
+<link rel="stylesheet" href="style.css?v=mdis7mfaxvat57xb72pz">
+</head>
+<body>
+<header class="top">
+  <h1>Weather</h1>
+  <form id="search" class="search" role="search" autocomplete="off">
+    <label for="q">Find a city</label>
+    <div class="searchrow">
+      <input id="q" type="text" maxlength="60" placeholder="Try Lisbon, Osaka or Nairobi">
+      <button type="submit" id="go">Search</button>
+    </div>
+    <ul id="matches" class="matches" hidden=""></ul>
+  </form>
+  <div class="units" role="group" aria-label="Temperature unit">
+    <button type="button" data-unit="c" aria-pressed="true">°C</button>
+    <button type="button" data-unit="f" aria-pressed="false">°F</button>
+  </div>
+</header>
+<p id="msg" class="msg" role="status" hidden=""></p>
+<main id="main" class="grid">
+  <section class="now" aria-live="polite">
+    <p class="place" id="place">Berlin</p>
+    <p class="when" id="when">Loading the weather…</p>
+    <div class="big"><span id="temp">--</span><span id="deg">°</span></div>
+    <p class="cond"><span id="condicon"></span><span id="cond">–</span></p>
+    <dl class="facts">
+      <div><dt>Feels like</dt><dd id="feels">–</dd></div>
+      <div><dt>Humidity</dt><dd id="hum">–</dd></div>
+      <div><dt>Wind</dt><dd id="wind">–</dd></div>
+      <div><dt>Rain now</dt><dd id="prec">–</dd></div>
+    </dl>
+  </section>
+  <section class="week">
+    <h2>Next seven days</h2>
+    <div class="chartbox"><canvas id="chart" role="img" aria-label="Line chart of daily high and low temperatures for the next seven days"></canvas></div>
+    <ol id="days" class="days"></ol>
+  </section>
+  <section class="hours">
+    <h2>Next 24 hours</h2>
+    <ol id="hourly" class="hourly"></ol>
+  </section>
+</main>
+<p class="credit" id="credit"></p>
+<script src="lib/icons.js?v=mdis7mfaxvat57xb72pz"></script>
+<script src="lib/chart.js?v=mdis7mfaxvat57xb72pz"></script>
+<script src="lib/data.js?v=mdis7mfaxvat57xb72pz"></script>
+<script src="app.js?v=mdis7mfaxvat57xb72pz"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator. Live data: Open-Meteo.com, ECB via Frankfurter.</a></body></html>
