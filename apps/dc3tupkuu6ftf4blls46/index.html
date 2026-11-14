@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src https://sjzzdkyxadmifktilrre.supabase.co/rest/v1/; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="dc3tupkuu6ftf4blls46"><meta name="referrer" content="no-referrer"><meta name="app-generator-db" content="{&quot;url&quot;:&quot;https://sjzzdkyxadmifktilrre.supabase.co&quot;,&quot;key&quot;:&quot;sb_publishable_TDZ-EYWPPCvAnOL7ByMM6A_06bv5OvG&quot;,&quot;prefix&quot;:&quot;adc3tupkuu6ftf4blls46_&quot;}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team board</title>
+<link rel="stylesheet" href="lib/fonts/space-grotesk/font.css?v=dc3tupkuu6ftf4blls46">
+<link rel="stylesheet" href="style.css?v=dc3tupkuu6ftf4blls46">
+</head>
+<body>
+<header class="top">
+  <h1>Team board</h1>
+  <label class="who">Your name
+    <input id="who" maxlength="20" placeholder="Anonymous" autocomplete="off">
+  </label>
+</header>
+<div id="status" class="status" role="status">Loading the board…</div>
+<section id="empty" class="empty" hidden="">
+  <h2>Nothing on the board yet</h2>
+  <p>Add a card in any column, or start with a few examples that you can clear in one step.</p>
+  <button id="seed" class="primary" type="button">Add example cards</button>
+</section>
+<main id="board" class="board" hidden=""></main>
+<div class="foot" id="foot" hidden="">
+  <button id="clear-examples" type="button" hidden="">Clear example cards</button>
+  <span>Everyone with this link sees changes live. Names are not checked.</span>
+</div>
+<div id="toast" class="toast" role="status" hidden="">
+  <span id="toast-text"></span><button id="undo" type="button">Undo</button>
+</div>
+<script src="lib/icons.js?v=dc3tupkuu6ftf4blls46"></script>
+<script src="lib/db.js?v=dc3tupkuu6ftf4blls46"></script>
+<script src="app.js?v=dc3tupkuu6ftf4blls46"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator. Anything entered here is public.</a></body></html>
