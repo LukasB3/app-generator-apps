@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src https://api.app-generator.lukasbossert.com/api/data/; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="pprhpwiu4buokklcnxx3"><meta name="referrer" content="no-referrer"><meta name="app-generator-data" content="https://api.app-generator.lukasbossert.com/api/data/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather dashboard</title>
+<link rel="stylesheet" href="lib/fonts/space-grotesk/font.css?v=pprhpwiu4buokklcnxx3">
+<link rel="stylesheet" href="style.css?v=pprhpwiu4buokklcnxx3">
+</head>
+<body>
+<header class="top">
+  <h1>Weather</h1>
+  <form id="search" class="search" autocomplete="off">
+    <label for="q">City</label>
+    <input id="q" type="search" maxlength="60" placeholder="Search a city, e.g. Lisbon">
+    <button type="submit" id="go"></button>
+  </form>
+  <div class="units" role="group" aria-label="Temperature unit">
+    <button type="button" data-unit="C" aria-pressed="true">°C</button>
+    <button type="button" data-unit="F" aria-pressed="false">°F</button>
+  </div>
+</header>
+<ul id="results" class="results" hidden=""></ul>
+<p id="msg" class="msg" role="status" hidden=""></p>
+
+<main class="grid">
+  <section id="now" class="now" aria-live="polite">
+    <p class="loading">Loading weather…</p>
+  </section>
+  <section class="week">
+    <h2>Next seven days</h2>
+    <div class="chartbox"><canvas id="chart" role="img" aria-label="Daily high and low temperatures for the next seven days"></canvas></div>
+    <ul id="days" class="days"></ul>
+  </section>
+  <section class="hours">
+    <h2>Next hours</h2>
+    <ul id="hours" class="hourlist"></ul>
+  </section>
+</main>
+<p id="credit" class="credit"></p>
+
+<script src="lib/icons.js?v=pprhpwiu4buokklcnxx3"></script>
+<script src="lib/chart.js?v=pprhpwiu4buokklcnxx3"></script>
+<script src="lib/data.js?v=pprhpwiu4buokklcnxx3"></script>
+<script src="app.js?v=pprhpwiu4buokklcnxx3"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator. Live data: Open-Meteo.com, ECB via Frankfurter.</a></body></html>
