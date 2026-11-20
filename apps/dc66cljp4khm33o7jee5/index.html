@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src https://api.app-generator.lukasbossert.com/api/data/; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="dc66cljp4khm33o7jee5"><meta name="referrer" content="no-referrer"><meta name="app-generator-data" content="https://api.app-generator.lukasbossert.com/api/data/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trip weather planner</title>
+<link rel="stylesheet" href="lib/fonts/space-grotesk/font.css?v=dc66cljp4khm33o7jee5">
+<link rel="stylesheet" href="lib/fonts/inter/font.css?v=dc66cljp4khm33o7jee5">
+<link rel="stylesheet" href="style.css?v=dc66cljp4khm33o7jee5">
+</head>
+<body>
+<main>
+  <header class="top">
+    <h1>Trip weather planner</h1>
+    <p class="sub">Next seven days, two cities</p>
+  </header>
+
+  <section class="pickers" id="pickers"></section>
+
+  <div id="status" class="status" role="status">Loading the forecast…</div>
+
+  <div id="content" hidden="">
+    <section class="panel verdict" aria-live="polite">
+      <h2>Verdict</h2>
+      <p id="verdictHead" class="verdict-head"></p>
+      <p id="verdictText" class="verdict-text"></p>
+    </section>
+
+    <section class="panel chartpanel">
+      <h2>Highs, lows and chance of rain</h2>
+      <div class="chartbox"><canvas id="chart" role="img" aria-label="Chart of daily highs, lows and chance of rain for both cities"></canvas></div>
+    </section>
+
+    <section class="panel">
+      <h2>Day by day</h2>
+      <div id="days" class="days"></div>
+    </section>
+  </div>
+
+  <p id="credit" class="credit"></p>
+</main>
+<script src="lib/icons.js?v=dc66cljp4khm33o7jee5"></script>
+<script src="lib/chart.js?v=dc66cljp4khm33o7jee5"></script>
+<script src="lib/data.js?v=dc66cljp4khm33o7jee5"></script>
+<script src="app.js?v=dc66cljp4khm33o7jee5"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator. Live data: Open-Meteo.com, ECB via Frankfurter.</a></body></html>
