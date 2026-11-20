@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src https://api.app-generator.lukasbossert.com/api/data/; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="dv24322dzpudqcxlfx5o"><meta name="referrer" content="no-referrer"><meta name="app-generator-data" content="https://api.app-generator.lukasbossert.com/api/data/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Currency dashboard</title>
+<link rel="stylesheet" href="lib/fonts/space-grotesk/font.css?v=dv24322dzpudqcxlfx5o">
+<link rel="stylesheet" href="lib/fonts/inter/font.css?v=dv24322dzpudqcxlfx5o">
+<link rel="stylesheet" href="style.css?v=dv24322dzpudqcxlfx5o">
+</head>
+<body>
+<header class="top">
+  <h1>Currency dashboard</h1>
+  <p class="asof" id="asof">Loading today's rates…</p>
+</header>
+
+<main class="grid">
+  <section class="main-col">
+    <form class="convert" id="form" autocomplete="off">
+      <div class="field amount">
+        <label for="amount">Amount</label>
+        <input id="amount" type="text" inputmode="decimal" maxlength="14" value="100">
+      </div>
+      <div class="field">
+        <label for="from">From</label>
+        <select id="from"></select>
+      </div>
+      <button type="button" class="swap" id="swap" aria-label="Swap currencies"></button>
+      <div class="field">
+        <label for="to">To</label>
+        <select id="to"></select>
+      </div>
+    </form>
+
+    <div class="result" aria-live="polite">
+      <p class="eq" id="eq">100 EUR =</p>
+      <p class="big" id="big">…</p>
+      <p class="unit" id="unit"></p>
+    </div>
+
+    <div class="msg" id="msg" role="status" hidden=""></div>
+
+    <div class="chartbox">
+      <h2 id="charttitle">Last 90 days</h2>
+      <div class="stats">
+        <div><span class="k">High</span><span class="v" id="hi">–</span></div>
+        <div><span class="k">Low</span><span class="v" id="lo">–</span></div>
+        <div><span class="k">Change</span><span class="v" id="chg">–</span></div>
+      </div>
+      <div class="canvas-wrap"><canvas id="chart" role="img" aria-label="Exchange rate over the last 90 days"></canvas></div>
+      <p class="empty" id="chartmsg" hidden=""></p>
+    </div>
+  </section>
+
+  <aside class="side">
+    <h2>Today against the euro</h2>
+    <div class="field">
+      <label for="filter">Find a currency</label>
+      <input id="filter" type="text" maxlength="20" placeholder="Code, e.g. CHF">
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">Currency</th><th scope="col" class="num">1 EUR buys</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="2" class="empty">Loading rates…</td></tr></tbody>
+      </table>
+    </div>
+    <p class="hint">Select a row to convert euros into that currency.</p>
+  </aside>
+</main>
+
+<footer class="foot"><p id="credit">Rates: European Central Bank reference rates.</p></footer>
+
+<script src="lib/icons.js?v=dv24322dzpudqcxlfx5o"></script>
+<script src="lib/chart.js?v=dv24322dzpudqcxlfx5o"></script>
+<script src="lib/data.js?v=dv24322dzpudqcxlfx5o"></script>
+<script src="app.js?v=dv24322dzpudqcxlfx5o"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator. Live data: Open-Meteo.com, ECB via Frankfurter.</a></body></html>
