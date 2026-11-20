@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="r3gclabm3kfww6xbthul"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drum machine</title>
+<link rel="stylesheet" href="lib/fonts/space-grotesk/font.css?v=r3gclabm3kfww6xbthul">
+<link rel="stylesheet" href="lib/fonts/jetbrains-mono/font.css?v=r3gclabm3kfww6xbthul">
+<link rel="stylesheet" href="style.css?v=r3gclabm3kfww6xbthul">
+</head>
+<body>
+<main class="app">
+  <header class="top">
+    <h1>Drum machine</h1>
+    <p class="status" id="status" aria-live="polite">Loaded: Boom bap. Press Play.</p>
+  </header>
+
+  <section class="deck" aria-label="Transport">
+    <button id="play" class="play" type="button"></button>
+    <div class="bpm">
+      <span class="bpm-num" id="bpmOut">92</span>
+      <span class="bpm-unit">BPM</span>
+    </div>
+    <div class="knobs">
+      <label class="slider">Tempo
+        <input id="tempo" type="range" min="60" max="180" value="92">
+      </label>
+      <label class="slider">Swing <output id="swingOut">0%</output>
+        <input id="swing" type="range" min="0" max="100" value="0">
+      </label>
+      <label class="slider">Volume
+        <input id="volume" type="range" min="0" max="100" value="80">
+      </label>
+    </div>
+  </section>
+
+  <section class="presets" aria-label="Preset beats">
+    <div class="chips" id="chips"></div>
+    <button id="clear" class="ghost" type="button"></button>
+  </section>
+
+  <section class="seq" id="seq" aria-label="Step sequencer"></section>
+  <p class="hint">Tap pads to switch steps on or off. Space starts and stops.</p>
+</main>
+<script src="lib/icons.js?v=r3gclabm3kfww6xbthul"></script>
+<script src="audio.js?v=r3gclabm3kfww6xbthul"></script>
+<script src="app.js?v=r3gclabm3kfww6xbthul"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
