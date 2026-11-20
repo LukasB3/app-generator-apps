@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="bx3p5xws3zyozmtrstur"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trip expense splitter</title>
+<link rel="stylesheet" href="lib/fonts/space-grotesk/font.css?v=bx3p5xws3zyozmtrstur">
+<link rel="stylesheet" href="lib/fonts/inter/font.css?v=bx3p5xws3zyozmtrstur">
+<link rel="stylesheet" href="style.css?v=bx3p5xws3zyozmtrstur">
+</head>
+<body>
+<header class="top">
+  <h1>Weekend trip</h1>
+  <p class="total" id="total" aria-live="polite"></p>
+</header>
+<div id="banner" class="banner" hidden="">
+  <span>These are example expenses so you can see how it works.</span>
+  <button type="button" id="clear-examples" class="ghost"></button>
+</div>
+<main class="layout">
+  <section class="settle" aria-labelledby="h-settle">
+    <h2 id="h-settle">Settle up</h2>
+    <div id="transfers"></div>
+    <h3>Balances</h3>
+    <ul id="balances" class="balances"></ul>
+  </section>
+  <section class="work">
+    <form id="form" class="panel" autocomplete="off">
+      <h2>Add an expense</h2>
+      <div class="row">
+        <label class="grow">What was it for
+          <input id="desc" maxlength="60" required="" placeholder="Groceries">
+        </label>
+        <label class="amt">Amount
+          <input id="amount" type="number" inputmode="decimal" min="0.01" step="0.01" required="" placeholder="0.00">
+        </label>
+      </div>
+      <label>Paid by
+        <select id="payer"></select>
+      </label>
+      <fieldset>
+        <legend>Split between</legend>
+        <div id="split" class="chips"></div>
+      </fieldset>
+      <p id="error" class="error" role="alert"></p>
+      <button class="primary" type="submit">Add expense</button>
+    </form>
+
+    <div class="panel">
+      <h2>Expenses</h2>
+      <ul id="expenses" class="expenses"></ul>
+    </div>
+
+    <div class="panel">
+      <h2>People</h2>
+      <ul id="people" class="people"></ul>
+      <form id="person-form" class="row" autocomplete="off">
+        <label class="grow">New person
+          <input id="person" maxlength="20" placeholder="Name">
+        </label>
+        <button type="submit" class="secondary">Add person</button>
+      </form>
+    </div>
+  </section>
+</main>
+<div id="toast" class="toast" role="status" hidden="">
+  <span id="toast-text"></span>
+  <button type="button" id="toast-undo">Undo</button>
+</div>
+<script src="lib/icons.js?v=bx3p5xws3zyozmtrstur"></script>
+<script src="app.js?v=bx3p5xws3zyozmtrstur"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
