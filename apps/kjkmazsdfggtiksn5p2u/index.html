@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="kjkmazsdfggtiksn5p2u"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guest Wi-Fi card</title>
+<link rel="stylesheet" href="lib/fonts/space-grotesk/font.css?v=kjkmazsdfggtiksn5p2u">
+<link rel="stylesheet" href="style.css?v=kjkmazsdfggtiksn5p2u">
+</head>
+<body>
+<main class="layout">
+  <form id="form" class="panel" autocomplete="off">
+    <h1>Guest Wi-Fi card</h1>
+    <p id="example-note" class="example" hidden="">This is an example network. Replace it with yours.</p>
+
+    <label for="ssid">Network name</label>
+    <input id="ssid" maxlength="32" required="">
+
+    <label for="security">Security</label>
+    <select id="security">
+      <option value="WPA">WPA / WPA2 / WPA3</option>
+      <option value="WEP">WEP</option>
+      <option value="nopass">None (open network)</option>
+    </select>
+
+    <label for="password">Password</label>
+    <input id="password" maxlength="63" spellcheck="false" autocapitalize="off">
+    <p id="pw-hint" class="hint"></p>
+
+    <label class="check"><input type="checkbox" id="hidden"> Hidden network</label>
+    <label class="check"><input type="checkbox" id="showpw" checked=""> Print the password on the card</label>
+
+    <div class="actions">
+      <button type="button" id="print" class="primary"></button>
+      <button type="button" id="reset" class="ghost"></button>
+    </div>
+  </form>
+
+  <section class="stage" aria-label="Card preview">
+    <article class="card" id="card">
+      <div class="card-head">
+        <span id="wifi-icon"></span>
+        <span>Guest Wi-Fi</span>
+      </div>
+      <div class="qr-wrap"><div id="qr" role="img" aria-label="QR code for joining the network"></div></div>
+      <p class="scan">Point your phone camera at the code to join.</p>
+      <dl class="details">
+        <div><dt>Network</dt><dd id="c-ssid"></dd></div>
+        <div id="c-pw-row"><dt>Password</dt><dd id="c-pw"></dd></div>
+      </dl>
+    </article>
+  </section>
+</main>
+<script src="lib/icons.js?v=kjkmazsdfggtiksn5p2u"></script>
+<script src="lib/qrcode.js?v=kjkmazsdfggtiksn5p2u"></script>
+<script src="app.js?v=kjkmazsdfggtiksn5p2u"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
