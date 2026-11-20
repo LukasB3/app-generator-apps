@@ -1,0 +1,91 @@
+:root {
+  --page: #eef4f3;
+  --surface: #ffffff;
+  --text: #12302e;
+  --quiet: #3f5f5c;
+  --accent: #0b7f78;
+  --accent-ink: #ffffff;
+  --accent-soft: #d3ece9;
+  --line: #c3d8d5;
+  --danger: #a32b2b;
+  --head: 'Space Grotesk', sans-serif;
+  --body: 'Inter', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #0c1f1e;
+    --surface: #132b29;
+    --text: #e4f2f0;
+    --quiet: #9bbbb7;
+    --accent: #3cc4b9;
+    --accent-ink: #06201e;
+    --accent-soft: #1b4642;
+    --line: #28504c;
+    --danger: #ff9a9a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--page); color: var(--text);
+  font: 1rem/1.5 var(--body); padding: 1.25rem 1rem 5rem;
+}
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.top { max-width: 70rem; margin: 0 auto 1.25rem; }
+h1 { font: 700 clamp(1.75rem, 5vw, 2.75rem)/1.1 var(--head); margin: 0; letter-spacing: -0.02em; }
+h2 { font: 650 1.25rem var(--head); margin: 0 0 .75rem; }
+.sub { margin: .4rem 0 0; color: var(--quiet); font-variant-numeric: tabular-nums; }
+.layout { max-width: 70rem; margin: 0 auto; display: grid; gap: 1.5rem; }
+@media (min-width: 60rem) {
+  .layout { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: start; }
+  .chartbox { position: sticky; top: 1rem; }
+}
+.suggest { background: var(--accent-soft); padding: 1rem; border-radius: 10px; margin-bottom: 1rem; }
+.suggest label { font-weight: 600; display: block; margin-bottom: .4rem; }
+.row { display: flex; gap: .5rem; flex-wrap: wrap; }
+input {
+  flex: 1 1 14rem; min-height: 44px; padding: 0 .75rem; font: inherit; color: var(--text);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+}
+button { font: inherit; cursor: pointer; min-height: 44px; border-radius: 6px; }
+.primary {
+  background: var(--accent); color: var(--accent-ink); border: 0; padding: 0 1.1rem; font-weight: 650;
+}
+.primary:disabled { opacity: .6; cursor: default; }
+:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
+.msg { margin: .4rem 0 0; min-height: 1.4em; color: var(--danger); font-size: .95rem; }
+.status { color: var(--quiet); }
+.status.err { color: var(--danger); font-weight: 600; }
+.status:empty { display: none; }
+.examplebar {
+  border: 2px dashed var(--accent); border-radius: 10px; padding: .9rem 1rem; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; justify-content: space-between;
+}
+.examplebar p { margin: 0; flex: 1 1 14rem; }
+.examplebar[hidden] { display: none; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+.item {
+  display: flex; gap: .85rem; align-items: center; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 10px; padding: .6rem .9rem .6rem .6rem;
+  animation: in .25s ease-out;
+}
+.item.example { border-style: dashed; }
+@keyframes in { from { opacity: 0; transform: translateY(4px); } }
+@media (prefers-reduced-motion: reduce) { .item { animation: none; } }
+.vote {
+  flex: none; width: 3.6rem; min-height: 3.6rem; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; background: var(--surface); color: var(--accent); border: 2px solid var(--accent);
+  font: 700 1.15rem/1.1 var(--head); font-variant-numeric: tabular-nums; border-radius: 8px;
+}
+.vote svg { display: block; }
+.vote:hover:not(:disabled) { background: var(--accent-soft); }
+.vote.voted { background: var(--accent); color: var(--accent-ink); }
+.vote:disabled { cursor: default; }
+.vote.voted:disabled { opacity: 1; }
+.item.example .vote { border-color: var(--line); color: var(--quiet); }
+.text { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.tag {
+  display: inline-block; font-size: .8rem; font-weight: 600; background: var(--accent-soft);
+  padding: 0 .5rem; border-radius: 4px; margin-left: .5rem; color: var(--text);
+}
+.chartbox { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1rem; }
+.canvaswrap { position: relative; height: 18rem; }
