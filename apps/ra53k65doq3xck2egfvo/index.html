@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="app-generator-job" content="ra53k65doq3xck2egfvo"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Space invaders</title>
+<link rel="stylesheet" href="lib/fonts/space-grotesk/font.css?v=ra53k65doq3xck2egfvo">
+<link rel="stylesheet" href="lib/fonts/jetbrains-mono/font.css?v=ra53k65doq3xck2egfvo">
+<link rel="stylesheet" href="style.css?v=ra53k65doq3xck2egfvo">
+</head>
+<body>
+<main class="app">
+  <section class="stage">
+    <div class="board" id="board">
+      <canvas id="game" width="480" height="560" aria-label="Game board"></canvas>
+      <div class="overlay" id="overlay">
+        <h1 id="ov-title">Space invaders</h1>
+        <p id="ov-text">Clear the waves before they reach the ground.</p>
+        <button class="primary" id="start" type="button">Start game</button>
+      </div>
+    </div>
+    <div class="touch" aria-label="Touch controls">
+      <button type="button" id="t-left" aria-label="Move left"></button>
+      <button type="button" id="t-fire" class="fire">Fire</button>
+      <button type="button" id="t-right" aria-label="Move right"></button>
+    </div>
+  </section>
+
+  <aside class="side">
+    <div class="score">
+      <span class="lbl">Score</span>
+      <span class="big" id="score">0</span>
+    </div>
+    <dl class="stats">
+      <div><dt>Best</dt><dd id="best">0</dd></div>
+      <div><dt>Wave</dt><dd id="wave">1</dd></div>
+      <div><dt>Lives</dt><dd id="lives" aria-label="Lives">3</dd></div>
+    </dl>
+    <div class="actions">
+      <button type="button" id="pause">Pause</button>
+      <button type="button" id="mute">Sound on</button>
+    </div>
+    <ul class="keys">
+      <li><kbd>←</kbd><kbd>→</kbd> or <kbd>A</kbd><kbd>D</kbd> move</li>
+      <li><kbd>Space</kbd> fire</li>
+      <li><kbd>P</kbd> pause</li>
+    </ul>
+    <p class="pts">Top row 30, middle 20, bottom 10. The red ship in the sky is worth 50 to 300.</p>
+  </aside>
+</main>
+<script src="lib/icons.js?v=ra53k65doq3xck2egfvo"></script>
+<script src="game.js?v=ra53k65doq3xck2egfvo"></script>
+
+
+<a href="https://app-generator.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from App Generator</a></body></html>
